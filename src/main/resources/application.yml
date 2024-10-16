@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "spring-batch-etl"
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    url: ${PG_JDBC_URL}
+    username: ${PG_USER}
+    password: ${PG_PASSWORD}
+  batch:
+    jdbc:
+      initialize-schema: never
+      table-prefix: batch_jobs.batch_
+    job:
+      enabled: on
